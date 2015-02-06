@@ -1,0 +1,14 @@
+﻿@model HomeViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@Model.AgeTimeSpan.TotalDays.ToString("N0") Days Old
+<br/>
+OR
+<br/>
+@Model.AgeTimeSpan.TotalMinutes.ToString("N0") Minutes Old
+<br/>
+OR
+<br />
+@Model.AgeTimeSpan.TotalSeconds.ToString("N0") Seconds Old
