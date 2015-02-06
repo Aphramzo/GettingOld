@@ -2,7 +2,9 @@
 @{
     ViewBag.Title = "You're getting old";
 }
-
+<div class="page-header">
+    <h1>Hey Julie</h1>
+</div>
 <div class="panel panel-primary">
     <div class="panel-heading">Just how old are you?</div>
     <div class="panel-body">
@@ -36,6 +38,23 @@
         <div class="col-sm-4">
             <label>In Seconds:</label>
             @Model.Until40TimeSpan.TotalSeconds.ToString("N0")
+        </div>
+    </div>
+</div>
+<div class="panel panel-warning">
+    <div class="panel-heading">
+        What have <strong>you</strong> done with your life?
+    </div>
+    <div class="panel-body">
+        <div class="col-sm-4">
+            <label>How old you were when Taylor Swift was born:</label>
+            @((Model.TSwiftTimeSpan.TotalDays / 365.25).ToString("F0")) years @(((Model.TSwiftTimeSpan.TotalDays % 365.25)/30).ToString("F0")) months
+        </div>
+        <div class="col-sm-4">
+            And she already has five multi platinum albums. The first of which she released when she was 17 years old.
+        </div>
+        <div class="col-sm-4">
+            To put that in perspective, that would have been <strong>@Model.TSwiftFirstAlbum.ToShortDateString()</strong> for you.
         </div>
     </div>
 </div>

@@ -13,10 +13,13 @@ namespace GettingOld.Controllers
 		public ActionResult Index()
 		{
 			var birthdate = Convert.ToDateTime(ConfigurationManager.AppSettings["Birthday"]);
+			var tSwiftAgeFirstAlbum = Convert.ToDateTime("10/24/2006") - Convert.ToDateTime("12/13/1989");
 			return View(new HomeViewModel
 			{
 				AgeTimeSpan = (DateTime.Now - birthdate),
-				Until40TimeSpan = (birthdate.AddYears(40) - DateTime.Now)
+				Until40TimeSpan = (birthdate.AddYears(40) - DateTime.Now),
+				TSwiftTimeSpan = (Convert.ToDateTime("12/13/1989") - birthdate),
+				TSwiftFirstAlbum = (birthdate.AddSeconds(tSwiftAgeFirstAlbum.TotalSeconds))
 			});
 		}
 
