@@ -1,14 +1,41 @@
 ﻿@model HomeViewModel
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "You're getting old";
 }
 
-@Model.AgeTimeSpan.TotalDays.ToString("N0") Days Old
-<br/>
-OR
-<br/>
-@Model.AgeTimeSpan.TotalMinutes.ToString("N0") Minutes Old
-<br/>
-OR
-<br />
-@Model.AgeTimeSpan.TotalSeconds.ToString("N0") Seconds Old
+<div class="panel panel-primary">
+    <div class="panel-heading">Just how old are you?</div>
+    <div class="panel-body">
+        <div class="col-sm-4">
+            <label>In Days:</label>
+            @Model.AgeTimeSpan.TotalDays.ToString("N0")
+        </div>
+        <div class="col-sm-4">
+            <label>In Minutes:</label>
+            @Model.AgeTimeSpan.TotalMinutes.ToString("N0")
+        </div>
+        <div class="col-sm-4">
+            <label>In Seconds:</label>
+            @Model.AgeTimeSpan.TotalSeconds.ToString("N0")
+        </div>
+    </div>
+</div>
+<div class="panel panel-danger">
+    <div class="panel-heading">
+        How long until you're <strong>40</strong>?
+    </div>
+    <div class="panel-body">
+        <div class="col-sm-4">
+            <label>In Days:</label>
+            @Model.Until40TimeSpan.TotalDays.ToString("N0")
+        </div>
+        <div class="col-sm-4">
+            <label>In Minutes:</label>
+            @Model.Until40TimeSpan.TotalMinutes.ToString("N0")
+        </div>
+        <div class="col-sm-4">
+            <label>In Seconds:</label>
+            @Model.Until40TimeSpan.TotalSeconds.ToString("N0")
+        </div>
+    </div>
+</div>

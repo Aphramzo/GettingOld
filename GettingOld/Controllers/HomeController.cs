@@ -15,7 +15,8 @@ namespace GettingOld.Controllers
 			var birthdate = Convert.ToDateTime(ConfigurationManager.AppSettings["Birthday"]);
 			return View(new HomeViewModel
 			{
-				AgeTimeSpan = (DateTime.Now - birthdate)
+				AgeTimeSpan = (DateTime.Now - birthdate),
+				Until40TimeSpan = (birthdate.AddYears(40) - DateTime.Now)
 			});
 		}
 
