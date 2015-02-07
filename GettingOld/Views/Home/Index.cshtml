@@ -27,20 +27,20 @@
 </div>
 <div class="panel panel-danger">
     <div class="panel-heading">
-        How long until you're <strong>40</strong>?
+        How long until you're <strong>@Model.NextAge</strong>?
     </div>
     <div class="panel-body">
         <div class="col-sm-4">
             <label>In Days:</label>
-            @Model.Until40TimeSpan.TotalDays.ToString("N0")
+            @Model.UntilNextAgeTimeSpan.TotalDays.ToString("N0")
         </div>
         <div class="col-sm-4">
             <label>In Minutes:</label>
-            <span class="minutes-down">@Model.Until40TimeSpan.TotalMinutes.ToString("N0")</span>
+            <span class="minutes-down">@Model.UntilNextAgeTimeSpan.TotalMinutes.ToString("N0")</span>
         </div>
         <div class="col-sm-4">
             <label>In Seconds:</label>
-            <span class="seconds-down">@Model.Until40TimeSpan.TotalSeconds.ToString("N0")</span>
+            <span class="seconds-down">@Model.UntilNextAgeTimeSpan.TotalSeconds.ToString("N0")</span>
         </div>
     </div>
 </div>
