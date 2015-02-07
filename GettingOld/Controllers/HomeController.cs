@@ -30,7 +30,7 @@ namespace GettingOld.Controllers
 		{
 			//TODO: make this a little less manual
 			var rnd = new Random();
-			var number = rnd.Next(1,5);
+			var number = rnd.Next(1,6);
 			switch(number)
 			{
 				case 1: 
@@ -61,6 +61,15 @@ namespace GettingOld.Controllers
 						YourBirthday = yourBirthday
 					};
 				case 4:
+					return new FamousPerson
+					{
+						Name = "Evan Spiegel",
+						Description = "You may not know the name, but Evan founded snap chat and launched it when he was 21, and now has a net worth of over 1.5 billon dollars.",
+						Birthday = Convert.ToDateTime("6/4/1990"),
+						FamousDate = Convert.ToDateTime("7/1/2011"),
+						YourBirthday = yourBirthday
+					};
+				case 5:
 				default:
 					return new FamousPerson
 					{
