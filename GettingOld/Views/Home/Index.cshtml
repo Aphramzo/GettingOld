@@ -50,14 +50,15 @@
     </div>
     <div class="panel-body">
         <div class="col-sm-4">
-            <label>How old you were when Taylor Swift was born:</label>
-            @((Model.TSwiftTimeSpan.TotalDays / 365.25).ToString("F0")) years @(((Model.TSwiftTimeSpan.TotalDays % 365.25)/30).ToString("F0")) months
+            <label>How old you were when @Model.FamousPerson.Name was born:</label>
+            <br />
+            @Model.FamousPerson.YourComparisonAge
         </div>
         <div class="col-sm-4">
-            And she already has five multi platinum albums. The first of which she released when she was 17 years old.
+            @Model.FamousPerson.Description
         </div>
         <div class="col-sm-4">
-            To put that in perspective, that would have been <strong>@Model.TSwiftFirstAlbum.ToShortDateString()</strong> for you.
+            To put that in perspective, that would have been <strong>@Model.FamousPerson.YourFamousAge.ToShortDateString()</strong> for you.
         </div>
     </div>
 </div>
