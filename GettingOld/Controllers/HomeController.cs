@@ -19,7 +19,8 @@ namespace GettingOld.Controllers
 				AgeTimeSpan = (DateTime.Now - birthdate),
 				Until40TimeSpan = (birthdate.AddYears(40) - DateTime.Now),
 				TSwiftTimeSpan = (Convert.ToDateTime("12/13/1989") - birthdate),
-				TSwiftFirstAlbum = (birthdate.AddSeconds(tSwiftAgeFirstAlbum.TotalSeconds))
+				TSwiftFirstAlbum = (birthdate.AddSeconds(tSwiftAgeFirstAlbum.TotalSeconds)),
+				Name = ConfigurationManager.AppSettings["Name"]
 			});
 		}
 

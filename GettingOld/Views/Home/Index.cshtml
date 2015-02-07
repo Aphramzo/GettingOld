@@ -2,8 +2,11 @@
 @{
     ViewBag.Title = "You're getting old";
 }
+@section scripts{
+    @Scripts.Render("~/bundles/ticker")
+}
 <div class="page-header">
-    <h1>Hey Julie</h1>
+    <h1>Hey @Model.Name</h1>
 </div>
 <div class="panel panel-primary">
     <div class="panel-heading">Just how old are you?</div>
@@ -14,11 +17,11 @@
         </div>
         <div class="col-sm-4">
             <label>In Minutes:</label>
-            @Model.AgeTimeSpan.TotalMinutes.ToString("N0")
+            <span class="minutes">@Model.AgeTimeSpan.TotalMinutes.ToString("N0")</span>
         </div>
         <div class="col-sm-4">
             <label>In Seconds:</label>
-            @Model.AgeTimeSpan.TotalSeconds.ToString("N0")
+            <span class="seconds">@Model.AgeTimeSpan.TotalSeconds.ToString("N0")</span>
         </div>
     </div>
 </div>
@@ -33,11 +36,11 @@
         </div>
         <div class="col-sm-4">
             <label>In Minutes:</label>
-            @Model.Until40TimeSpan.TotalMinutes.ToString("N0")
+            <span class="minutes">@Model.Until40TimeSpan.TotalMinutes.ToString("N0")</span>
         </div>
         <div class="col-sm-4">
             <label>In Seconds:</label>
-            @Model.Until40TimeSpan.TotalSeconds.ToString("N0")
+            <span class="seconds">@Model.Until40TimeSpan.TotalSeconds.ToString("N0")</span>
         </div>
     </div>
 </div>
